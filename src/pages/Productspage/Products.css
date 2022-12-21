@@ -1,0 +1,7 @@
+#output-products{
+    cursor:pointer;
+}
+
+#output-products:hover{
+    box-shadow: 0px 1px 5px black;
+}
