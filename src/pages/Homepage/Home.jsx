@@ -1,18 +1,39 @@
 import React from "react";
+
 import "./Home.css";
+import { Link } from "react-router-dom";
+import Products from "../Productspage/Products";
 export default function Home() {
   return (
     <div>
-      <div className="card text-bg-dark">
-        <img src="./homepage/man.jpg" className="card-img" alt="background" />
-        <div className="card-img-overlay container justify-content-around d-flex flex-column">
-          <div className="container">
-            <h5 className="card-title display-3 fw-bolder">YO!!</h5>
-            <p className="card-text  fw-bold display-6">New Products are Available</p>
-            <p className="card-text fw-bold">Check Out the latest Products</p>
-          </div>
+      <div
+        className="row container mx-auto"
+        style={{ alignItems: "center", backgroundColor: "#FFC1BF" }}
+      >
+        <div className="col-6 ">
+          <h5 id="discount">up to 20% discount</h5>
+          <h3 id="fashion">Fashion at it's peak</h3>
+          <Link to = '/products'><button
+            style={{
+              backgroundColor: "white",
+              border: "none",
+              height: "40px",
+              width: "100px",
+              fontWeight: "bold",
+            }}
+          > Products 
+            
+          </button></Link>
+        </div>
+        <div className="col-6" style={{}}>
+          <img
+            src="woman.png"
+            alt="woman"
+            id="homepage"
+          />
         </div>
       </div>
+      <Products/>
     </div>
   );
 }

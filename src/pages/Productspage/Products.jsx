@@ -1,9 +1,12 @@
 import React from "react";
-import UseFetch from "../../components/UseFetch";
+import { Link } from "react-router-dom";
+import UseFetch from "../../components/useFetch";
 //"https://fakestoreapi.com/products"
 import "./Products.css";
 export default function Products() {
-  const {data, filter, setFilter, loading} = UseFetch("https://fakestoreapi.com/products")
+  const { data, filter, setFilter, loading } = UseFetch(
+    "https://fakestoreapi.com/products"
+  );
 
   const Loading = () => {
     return <div className=" d-flex justify-content-center">loading...</div>;
@@ -76,7 +79,9 @@ export default function Products() {
                   <div className="card-body p-4">
                     <h5 className="card-title mb-0">{product.title}</h5>
                     <p className="card-text">${product.price}</p>
-                    <button className="bg-dark text-white">Buy Now</button>
+                    <Link to={`/products/${product.id}`}>
+                      <button className="bg-dark text-white">Buy Now</button>
+                    </Link>
                   </div>
                 </div>
               </div>

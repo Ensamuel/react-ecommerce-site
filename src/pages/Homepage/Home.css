@@ -1,4 +1,25 @@
-img{
-    height: 500px;
-    opacity: 0.6;
+#homepage{
+    height: 700px;
+    width: 700px;
+    opacity: 1.5;
+    margin-top: -150px;
+}
+#discount{
+    font-size: 50px;
+}
+#fashion{
+    font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+    #homepage{
+        height: 200px;
+        width: 200px;
+        margin-top: -70px;
+    }
+    #discount{
+        font-size: 20px;
+    }
+    #fashion{
+        font-size: 10px;
+    }
 }
